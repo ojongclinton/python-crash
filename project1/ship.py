@@ -13,11 +13,14 @@ class Ship:
         self.image = pygame.image.load('images/ship.bmp')
         self.rect = self.image.get_rect()
         self.moving_right = False
+        self.moving_left = False
 
         #Start each new ship at the bottom center of the screen
         self.rect.midbottom = self.screen_rect.midbottom
 
     def update(self):
+        if self.moving_right:
+            self.rect.x += 1
         if self.moving_right:
             self.rect.x += 1
 
