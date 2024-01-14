@@ -19,7 +19,7 @@ poeple.append({"Fname": "John", "Lname": "Doe"})
 for name in poeple:
     for k, v in name.items():
         print(f"\nKey : {k}")
-        print(f"Value: {v}")
+        print(f"All is goonee bruhhhh: {v}")
     print("------------------------")
 
 # print(poeple[0].get("Fname", "Not yet set"))
