@@ -55,6 +55,12 @@ class AlienInvasion:
         # else:
         #     self.stats.game_active = False
 
+    def _check_aliens_bottom(self):
+        for alien in self.aliens.sprites():
+            if alien.rect.bottom >= self.settings.screen_height:
+                self._ship_hit()
+                break
+
     def _fire_bullet(self):
         """Create a new bullet and add it to the bullets group"""
         if (len(self.bullets) < self.settings.bullets_allowed):
@@ -102,6 +108,7 @@ class AlienInvasion:
         self.aliens.update()
         if pygame.sprite.spritecollideany(self.ship,self.aliens):
             self._ship_hit()
+        self._check_aliens_bottom()
             # self._ship_hit()
 
     def _check_fleet_edges(self):
