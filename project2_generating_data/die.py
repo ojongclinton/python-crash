@@ -1,6 +1,6 @@
 import random
 class Die:
-    def __init__(self,num_sides = 2):
+    def __init__(self,num_sides = 6):
         self.num_sides = num_sides
     
     def roll(self):
