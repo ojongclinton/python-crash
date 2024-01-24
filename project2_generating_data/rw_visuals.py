@@ -15,7 +15,7 @@ while True:
     ax.set_aspect('equal')
     ax.set_title("Random Walk",fontsize=24)
     ax.get_xaxis().set_visible(False)
-    ax.get_yaxis().set_visible(False)sss
+    ax.get_yaxis().set_visible(False)
     plt.show()
     keep_running = input("Make another walk? (y/n): ")
     if keep_running == 'n':
